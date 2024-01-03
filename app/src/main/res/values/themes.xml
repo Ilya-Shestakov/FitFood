@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.Good_Food" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#C2CCF6</item>
+    </style>
+
+    <style name="Theme.Good_Food" parent="Base.Theme.Good_Food"/>
+
+</resources>

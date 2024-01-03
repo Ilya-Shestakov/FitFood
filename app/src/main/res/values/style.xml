@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Radius_20dp_num_1" parent="">
+        <item name="cornerRadius">15dp</item>
+    </style>
+</resources>

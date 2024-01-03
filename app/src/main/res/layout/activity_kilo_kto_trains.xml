@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Kilo_k_to_trains"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blok_times_trains"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/base_color_1"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/title_view_kalkul_kal"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:fontFamily="@font/rubik_mono_one"
+            android:gravity="center"
+
+            android:shadowColor="@color/base_color_2"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="10"
+
+            android:text="Калории в тренировках"
+            android:textColor="@color/gray"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blok_2_btns_in_btn1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/xml_for_sloi"
+        app:layout_constraintTop_toBottomOf="@+id/blok_times_trains"
+        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="-20dp"
+        app:layout_constraintBottom_toTopOf="@+id/blok_2_settings_in_btn1"
+        >
+
+        <TextView
+            android:id="@+id/checked_time_trains_title"
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/rubik_mono_one"
+            android:gravity="center_vertical"
+            android:text="Введите время тренировки:"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+
+            android:shadowColor="@color/base_color_2"
+            android:shadowRadius="10"
+            android:shadowDy="10"
+            android:shadowDx="10"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/liner_to_check_time"
+            app:layout_constraintTop_toBottomOf="@+id/checked_time_trains_title"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@+id/checked_time_trains_title"
+            app:layout_constraintEnd_toEndOf="@id/checked_time_trains_title">
+
+            <EditText
+                android:id="@+id/check_hour_edit_text"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:hint="Часы..."
+                android:inputType="number"
+                android:maxLength="2"
+                android:textColorHint="@color/light_black_color_btn"
+                android:textSize="20dp"
+                android:fontFamily="@font/russo_one"
+
+                app:layout_constraintStart_toStartOf="@+id/checked_time_trains_title"
+                app:layout_constraintTop_toBottomOf="@+id/checked_time_trains_title"
+                />
+
+
+            <EditText
+                android:id="@+id/check_minuts_edit_text"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:hint="Минуты..."
+                android:inputType="number"
+                android:maxLength="2"
+                android:textColorHint="@color/light_black_color_btn"
+                android:textSize="20dp"
+                android:fontFamily="@font/russo_one"
+
+                app:layout_constraintStart_toEndOf="@+id/check_hour_edit_text"
+                app:layout_constraintTop_toTopOf="@+id/check_hour_edit_text"
+
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/text_sr_zatraty_on_train"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="30dp"
+            android:text="Среднии затраты на этой тренировке:"
+            android:textSize="20dp"
+            android:fontFamily="@font/russo_one"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/liner_to_check_time"
+            android:layout_marginStart="30dp"
+            />
+
+        <TextView
+            android:id="@+id/text_u_zatraty_on_train"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+
+            android:text="Ваши результаты на этой тренировке:"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/russo_one"
+
+            app:layout_constraintTop_toBottomOf="@+id/text_sr_zatraty_on_train"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            />
+
+        <TextView
+            android:id="@+id/text_sr_rashod_Kk_chek"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:fontFamily="@font/russo_one"
+
+            app:layout_constraintStart_toEndOf="@+id/text_sr_zatraty_on_train"
+            app:layout_constraintEnd_toEndOf="@+id/blok_2_btns_in_btn1"
+            app:layout_constraintTop_toTopOf="@+id/text_sr_zatraty_on_train"
+            app:layout_constraintBottom_toBottomOf="@+id/text_sr_zatraty_on_train"
+
+            />
+
+        <TextView
+            android:id="@+id/u_result_on_u_train_numb"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:fontFamily="@font/russo_one"
+
+            app:layout_constraintStart_toEndOf="@+id/text_u_zatraty_on_train"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_u_zatraty_on_train"
+            app:layout_constraintBottom_toBottomOf="@+id/text_u_zatraty_on_train"
+            
+            />
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_u_zatraty_on_train">
+
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_gym_power"
+                    style="@style/Radius_20dp_num_1"
+                    android:layout_width="170dp"
+                    android:layout_height="53dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/custom_btn_flowers_bottom_left"
+                    android:gravity="center"
+                    android:onClick="metod_gym_power_train"
+                    android:fontFamily="@font/russo_one"
+                    android:text="Спорт зал - силовая"
+                    android:textColor="@color/white"
+                    android:textSize="11dp"
+
+                    />
+
+                <Button
+                    style="@style/Radius_20dp_num_1"
+                    android:layout_width="170dp"
+                    android:layout_height="53dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/custom_btn_flowers_bottom_right"
+                    android:gravity="center"
+                    android:onClick="metod_gym_kross_fit_train"
+                    android:fontFamily="@font/russo_one"
+                    android:text="Спорт зал - Кроссфит"
+                    android:textColor="@color/white"
+                    android:textSize="11dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+
+                <Button
+                    style="@style/Radius_20dp_num_1"
+                    android:layout_width="170dp"
+                    android:layout_height="53dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/custom_btn_flowers_bottom_left"
+                    android:gravity="center"
+                    android:onClick="metod_basket_train"
+                    android:text="Баскетбол"
+                    android:textColor="@color/white"
+                    android:textSize="11dp"
+                    android:fontFamily="@font/russo_one"/>
+
+
+                <Button
+                    style="@style/Radius_20dp_num_1"
+
+                    android:layout_width="170dp"
+                    android:layout_height="53dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/custom_btn_flowers_bottom_right"
+                    android:gravity="center"
+                    android:onClick="metod_tennis_train"
+                    android:text="Теннис"
+                    android:textColor="@color/white"
+                    android:textSize="11dp"
+                    android:fontFamily="@font/russo_one"/>
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <Button
+                    style="@style/Radius_20dp_num_1"
+
+                    android:layout_width="170dp"
+                    android:layout_height="53dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/custom_btn_flowers_bottom_left"
+                    android:gravity="center"
+                    android:onClick="metod_swimming_train"
+                    android:text="Плаванье"
+                    android:textColor="@color/white"
+
+                    android:textSize="11dp"
+                    android:fontFamily="@font/russo_one"/>
+
+                <Button
+                    style="@style/Radius_20dp_num_1"
+
+                    android:layout_width="170dp"
+                    android:layout_height="53dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/custom_btn_flowers_bottom_right"
+                    android:gravity="center"
+                    android:onClick="metod_footboll_train"
+                    android:text="Футбол"
+                    android:textColor="@color/white"
+
+                    android:textSize="11dp"
+                    android:fontFamily="@font/russo_one"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/next_sport_btn"
+                    style="@style/Radius_20dp_num_1"
+                    android:layout_width="180dp"
+                    android:layout_height="53dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/custom_btn_flowers_bottom_left"
+                    android:gravity="center"
+                    android:onClick="metod_next_sport_train"
+                    android:text="Другой вид спорта"
+                    android:textColor="@color/white"
+                    android:textSize="11dp"
+                    android:fontFamily="@font/russo_one"/>
+
+                <Button
+                    android:id="@+id/user_data_check"
+                    style="@style/Radius_20dp_num_1"
+                    android:layout_width="180dp"
+                    android:layout_height="53dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/custom_btn_flowers_bottom_right"
+                    android:gravity="center"
+                    android:onClick="method_check_data_user_trains"
+                    android:text="Свои данные"
+                    android:textColor="@color/white"
+                    android:textSize="11dp"
+                    android:fontFamily="@font/russo_one"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blok_2_settings_in_btn1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/xml_for_sloi_bottom"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/imageButton_go_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                android:onClick="imageButton_go_home_method"
+                app:srcCompat="@drawable/baseline_home_24" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@drawable/light_to_btn_menu"
+                app:srcCompat="@drawable/baseline_sports_24" />
+
+            <ImageButton
+                android:id="@+id/btn_settings_in_trains"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                app:srcCompat="@drawable/baseline_table_rows_24" />
+
+            <ImageButton
+                android:id="@+id/btn_kk_in_train_goToLay"
+                android:onClick="btn_kk_in_train_goToLay_method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                app:srcCompat="@drawable/baseline_fastfood_24" />
+
+            <ImageButton
+                android:id="@+id/btn_itogs_in_trains"
+                android:onClick="btn_itogs_in_trains_method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                app:srcCompat="@drawable/baseline_sports_score_24" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

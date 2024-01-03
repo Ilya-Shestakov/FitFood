@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_white">#D1CDCD</color>
+    <color name="blue_btn_color">#9AF6F6</color>
+    <color name="light_black_color_btn">#878787</color>
+    <color name="color_for_titles">#454545</color>
+    <color name="color_to_btns">#9AADFD</color>
+    <color name="color_to_constrant_2">#00dfc3</color>
+    <color name="color_to_constrant_1">#ACFAEF</color>
+    <color name="color_to_constrant_3">#019391</color>
+    <color name="gray">#47494A</color>
+    <color name="gray_to_title">#4E4E4E</color>
+    <color name="blue_light">#FF03DAC5</color>
+
+
+
+    <color name="base_color_1">#F1F4FD</color>
+    <color name="base_color_2">#ABB9F8</color>
+    <color name="base_color_3">#FBF9F4</color>
+    <color name="base_color_4">#00A08A</color>
+    <color name="base_color_5">#C3CFFB</color>
+
+</resources>

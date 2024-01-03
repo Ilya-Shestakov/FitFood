@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="320dp"
+    android:layout_height="620dp"
+    android:layout_gravity="center"
+    tools:context=".fast_food_btn_wind">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/color_to_btns_gran"
+        app:cardCornerRadius="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/color_to_btns_gran">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_kasha_ovs"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/border_to_text"
+                        android:layout_height="70dp"
+                        android:text="Ягоды"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="30dp"
+                        android:fontFamily="@font/russo_one"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:text="Некоторые фрукты"
+                        android:background="@drawable/border_to_text"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="30dp"
+                        android:fontFamily="@font/russo_one"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@drawable/border_to_text"
+                        android:text="Орехи\n(не более 30 грамм)"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="30dp"
+                        android:fontFamily="@font/russo_one"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:text="Обезжиренный йогурт"
+                        android:background="@drawable/border_to_text"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="30dp"
+                        android:fontFamily="@font/russo_one"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:text="Сухофрукты"
+                        android:background="@drawable/border_to_text"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="30dp"
+                        android:fontFamily="@font/russo_one"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:text="Кефир"
+                        android:textStyle="bold"
+                        android:background="@drawable/border_to_text"
+                        android:textColor="@color/white"
+                        android:textSize="30dp"
+                        android:fontFamily="@font/russo_one"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:text="Хлебцы"
+                        android:background="@drawable/border_to_text"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="30dp"
+                        android:fontFamily="@font/russo_one"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:text="Сок морковный"
+                        android:textStyle="bold"
+                        android:background="@drawable/border_to_text"
+                        android:textColor="@color/white"
+                        android:textSize="30dp"
+                        android:fontFamily="@font/russo_one"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:text="Сок яблочный"
+                        android:textStyle="bold"
+                        android:background="@drawable/border_to_text"
+                        android:textColor="@color/white"
+                        android:textSize="30dp"
+                        android:fontFamily="@font/russo_one"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

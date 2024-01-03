@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Good_Food"
+        tools:targetApi="31">
+        <activity
+            android:name=".trains_user_check"
+            android:exported="false" />
+        <activity
+            android:name=".food_user_check"
+            android:exported="false" />
+        <activity
+            android:name=".wind_to_web_food"
+            android:exported="false" />
+        <activity
+            android:name=".wed_food"
+            android:exported="false" />
+        <activity
+            android:name=".sunday_wind"
+            android:exported="false" />
+        <activity
+            android:name=".soturday_wind"
+            android:exported="false" />
+        <activity
+            android:name=".frieday_wind"
+            android:exported="false" />
+        <activity
+            android:name=".thoursday_wind"
+            android:exported="false" />
+        <activity
+            android:name=".thursday_wind"
+            android:exported="false" />
+        <activity
+            android:name=".result_wind_all_proGG"
+            android:exported="false" />
+        <activity
+            android:name=".thuesday_wind"
+            android:exported="false" />
+        <activity
+            android:name=".monday_wind"
+            android:exported="false" />
+        <activity
+            android:name=".Itogs"
+            android:exported="false" />
+        <activity
+            android:name=".Wind_to_web"
+            android:exported="false" />
+        <activity
+            android:name=".Web_activity_trains"
+            android:exported="false" />
+        <activity
+            android:name=".fast_food_btn_wind"
+            android:exported="false" />
+        <activity
+            android:name=".dinner_btn_wind"
+            android:exported="false" />
+        <activity
+            android:name=".launch_btn_wind"
+            android:exported="false" />
+        <activity
+            android:name=".Zavtrak_btn_wind"
+            android:exported="false" />
+        <activity
+            android:name=".Kk_in_food"
+            android:exported="false" />
+        <activity
+            android:name=".Rezym_pitaniya"
+            android:exported="false" />
+        <activity
+            android:name=".Settings"
+            android:exported="false" />
+        <activity
+            android:name=".Kilo_k_to_trains"
+            android:exported="false" />
+        <activity
+            android:name=".Next_trains_activity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

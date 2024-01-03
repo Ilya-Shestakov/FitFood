@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Itogs">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blok_1_in_food"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/base_color_1"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:fontFamily="@font/rubik_mono_one"
+            android:gravity="center"
+
+            android:shadowColor="@color/base_color_2"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="10"
+            android:text="Календарь\nи ваши итоги"
+            android:textColor="@color/gray"
+            android:textSize="40dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blok_2_in_food"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/xml_for_sloi"
+        app:layout_constraintTop_toBottomOf="@+id/blok_1_in_food"
+        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="-20dp"
+        app:layout_constraintBottom_toTopOf="@+id/blok_3_in_food">
+
+        <Button
+            android:id="@+id/btn_monday"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_to_btns_gran"
+            android:text="Понедельник"
+            android:textSize="15dp"
+            android:fontFamily="@font/russo_one"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btn_thuesday"
+
+            android:onClick="mondey_method"
+            />
+
+        <Button
+            android:id="@+id/btn_thuesday"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_to_btns_gran"
+            android:text="Вторник"
+            android:textSize="15dp"
+            android:fontFamily="@font/russo_one"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_monday"
+            app:layout_constraintBottom_toTopOf="@+id/btn_thursday"
+
+            android:onClick="tuesday_method"
+            />
+
+        <Button
+            android:id="@+id/btn_thursday"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_to_btns_gran"
+            android:text="Среда"
+            android:textSize="15dp"
+            android:fontFamily="@font/russo_one"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_thuesday"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_chetverg"
+
+            android:onClick="thursday_method"
+            />
+
+        <Button
+            android:id="@+id/btn_chetverg"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_to_btns_gran"
+            android:text="Четверг"
+            android:textSize="15dp"
+            android:fontFamily="@font/russo_one"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_thursday"
+            app:layout_constraintBottom_toTopOf="@+id/btn_friday"
+
+            android:onClick="thoursday_method"
+            />
+
+        <Button
+            android:id="@+id/btn_friday"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_to_btns_gran"
+            android:text="Пятница"
+            android:textSize="15dp"
+            android:fontFamily="@font/russo_one"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_chetverg"
+            app:layout_constraintBottom_toTopOf="@+id/btn_soturday"
+
+            android:onClick="friday_method"
+            />
+
+        <Button
+            android:id="@+id/btn_soturday"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_to_btns_gran"
+            android:text="Суббота"
+            android:textSize="15dp"
+            android:fontFamily="@font/russo_one"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_friday"
+            app:layout_constraintBottom_toTopOf="@+id/btn_sunday"
+
+            android:onClick="soturday_method"
+            />
+
+        <Button
+            android:id="@+id/btn_sunday"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_to_btns_gran"
+            android:text="Воскресенье"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/russo_one"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_soturday"
+            app:layout_constraintBottom_toTopOf="@id/btn_resoult"
+
+            android:onClick="sunday_method"
+            />
+
+        <Button
+            android:id="@+id/btn_resoult"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_to_btns_gran"
+            android:text="Произвести расчёты"
+            android:textSize="13dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/russo_one"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_sunday"
+            app:layout_constraintBottom_toBottomOf="@+id/blok_2_in_food"
+            android:layout_marginBottom="20dp"
+
+            android:onClick="pokaz_resoult"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blok_3_in_food"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/xml_for_sloi_bottom"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/imageButton_go_home_in_food"
+                android:onClick="imageButton_go_home_in_food"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="25dp"
+                android:background="@color/base_color_2"
+                app:srcCompat="@drawable/baseline_home_24" />
+
+            <ImageButton
+                android:id="@+id/imageButton_go_trains_in_food"
+                android:onClick="imageButton_go_trains_in_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                app:srcCompat="@drawable/baseline_sports_24" />
+
+            <ImageButton
+                android:id="@+id/btn_settings_in_food"
+                android:layout_width="wrap_content"
+
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                android:onClick="btn_settings_in_food"
+                app:srcCompat="@drawable/baseline_table_rows_24" />
+
+            <ImageButton
+                android:id="@+id/imageButton5_in_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="imageButton5_in_food_method"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                app:srcCompat="@drawable/baseline_fastfood_24" />
+
+            <ImageButton
+                android:id="@+id/imageButton_to_set_to_time_in_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@drawable/light_to_btn_menu"
+                app:srcCompat="@drawable/baseline_sports_score_24" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

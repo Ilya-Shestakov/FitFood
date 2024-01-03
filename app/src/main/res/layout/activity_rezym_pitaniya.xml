@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Rezym_pitaniya">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blok_1_in_rezim"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/base_color_1"
+        tools:ignore="MissingConstraints">
+
+
+
+        <TextView
+            android:id="@+id/title_view_kalkul_kal"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:fontFamily="@font/rubik_mono_one"
+            android:gravity="center"
+
+            android:shadowColor="@color/base_color_2"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="10"
+
+            android:text="Режим питания"
+            android:textColor="@color/gray"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blok_2_in_rezim"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/xml_for_sloi"
+        app:layout_constraintTop_toBottomOf="@+id/blok_1_in_rezim"
+        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="-20dp"
+        app:layout_constraintBottom_toTopOf="@+id/blok_3_in_rezim">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btn_zavtrak"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/color_to_btns_gran"
+                android:fontFamily="@font/russo_one"
+                android:onClick="go_to_wind_zavtrak_method"
+                android:text="Завтрак"
+
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                />
+
+
+            <Button
+                android:id="@+id/btn_launch"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/color_to_btns_gran"
+                android:fontFamily="@font/russo_one"
+                android:text="Обед"
+                android:textColor="@color/white"
+                android:onClick="go_to_wind_launch_method"
+
+                android:textSize="15dp"
+                android:textStyle="bold"
+                />
+
+
+            <Button
+                android:id="@+id/btn_dinner"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/color_to_btns_gran"
+                android:fontFamily="@font/russo_one"
+                android:onClick="go_to_wind_dinner_method"
+                android:text="Ужин"
+                android:textColor="@color/white"
+
+                android:textSize="15dp"
+                android:textStyle="bold"
+                />
+
+            <Button
+                android:id="@+id/btn_perekus"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/color_to_btns_gran"
+                android:fontFamily="@font/russo_one"
+                android:text="Перекусы"
+                android:textColor="@color/white"
+                android:onClick="go_to_wind_fast_food_method"
+
+                android:textSize="15dp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blok_3_in_rezim"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/xml_for_sloi_bottom"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/imageButton_go_home_in_rezim"
+                android:onClick="imageButton_go_home_in_rezim_method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                app:srcCompat="@drawable/baseline_home_24" />
+
+            <ImageButton
+                android:id="@+id/imageButton4_go_train_in_rezim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                android:onClick="imageButton_go_trains_in_rezim_method"
+                app:srcCompat="@drawable/baseline_sports_24" />
+
+            <ImageButton
+                android:id="@+id/btn_settings_in_rezim"
+                android:onClick="imageButton_go_settings_in_rezim_method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                app:srcCompat="@drawable/baseline_table_rows_24" />
+
+            <ImageButton
+                android:id="@+id/btn_food_in_rezim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                android:onClick="imageButton_go_food_in_rezim_method"
+                app:srcCompat="@drawable/baseline_fastfood_24" />
+
+            <ImageButton
+                android:id="@+id/imageButton_to_set_to_time_in_gl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                android:onClick="imageButton_go_challenge_in_rezim_method"
+                app:srcCompat="@drawable/baseline_sports_score_24" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

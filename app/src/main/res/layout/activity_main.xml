@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/base_color_1">
+
+    <TextView
+        android:id="@+id/title_view_kalkul_kal"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:fontFamily="@font/rubik_mono_one"
+        android:gravity="center"
+
+        android:shadowColor="@color/base_color_2"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="10"
+
+        android:text="Калькулятор калорий"
+        android:textColor="@color/gray"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blok_2_btns"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/blok_setting"
+        app:layout_constraintTop_toBottomOf="@+id/title_view_kalkul_kal"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="-40dp"
+        android:background="@drawable/xml_for_sloi"
+        android:topLeftRadius="20dp"
+        android:topRightRadius="20dp"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <Button
+                android:id="@+id/btn_kk_on_trains"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/color_to_btns_gran"
+                android:fontFamily="@font/russo_one"
+                android:onClick="metod_kk_on_train"
+                android:text="Тренировки"
+
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/btn_good_food"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="@+id/blok_2_btns"
+
+                />
+
+
+            <Button
+                android:id="@+id/btn_go_to_rezim_of_food_in_gl"
+                android:onClick="method_go_to_rezim_of_food_in_gl"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/color_to_btns_gran"
+                android:fontFamily="@font/russo_one"
+                android:text="Режим питания"
+                android:textColor="@color/white"
+
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/btn_kk_in_food"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_kk_on_trains"
+
+
+                />
+
+
+            <Button
+                android:id="@+id/btn_kk_in_food"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/color_to_btns_gran"
+                android:fontFamily="@font/russo_one"
+                android:onClick="btn_kk_in_food_goToLay"
+                android:text="Продукты"
+                android:textColor="@color/white"
+
+                android:textSize="15dp"
+                android:textStyle="bold"
+
+
+                app:layout_constraintBottom_toTopOf="@+id/btn_kalendar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_good_food" />
+
+            <Button
+                android:id="@+id/btn_kalendar"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/color_to_btns_gran"
+                android:fontFamily="@font/russo_one"
+                android:onClick="kalendar_btn_method"
+                android:text="Календарь"
+                android:textColor="@color/white"
+
+                android:textSize="15dp"
+                android:textStyle="bold"
+
+
+                app:layout_constraintBottom_toTopOf="@+id/liner_layout_challenge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_kk_in_food" />
+
+            <LinearLayout
+                android:id="@+id/liner_layout_challenge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/blok_setting"
+                app:layout_constraintEnd_toEndOf="@+id/btn_kalendar"
+
+                app:layout_constraintStart_toStartOf="@+id/btn_kalendar"
+                app:layout_constraintTop_toBottomOf="@+id/btn_kalendar">
+
+                <Button
+                    android:id="@+id/btn_challenge_show"
+                    style="@style/Radius_20dp_num_1"
+                    android:layout_width="140dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/color_to_btns_gran"
+                    android:fontFamily="@font/russo_one"
+                    android:onClick="showWindDialog_p2"
+                    android:text="Посмотреть цель"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_challenge_save"
+                    style="@style/Radius_20dp_num_1"
+                    android:layout_width="140dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/color_to_btns_gran"
+                    android:fontFamily="@font/russo_one"
+                    android:text="Установить цель"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blok_setting"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/xml_for_sloi_bottom"
+        android:topLeftRadius="20dp"
+        android:topRightRadius="20dp">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/imageButton_go_home_in_gl"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="25dp"
+                android:background="@color/base_color_5"
+                app:srcCompat="@drawable/baseline_home_24" />
+
+            <ImageButton
+                android:id="@+id/imageButton4_in_gl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                android:onClick="metod_kk_on_train_in_gl"
+                app:srcCompat="@drawable/baseline_sports_24" />
+
+            <ImageButton
+                android:id="@+id/btn_settings_in_gl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                app:srcCompat="@drawable/baseline_table_rows_24" />
+
+            <ImageButton
+                android:id="@+id/btn_food_in_gl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                android:onClick="btn_food_in_gl_method"
+                app:srcCompat="@drawable/baseline_fastfood_24" />
+
+            <ImageButton
+                android:id="@+id/btn_itogs_in_gl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                android:onClick="btn_itogs_in_gl_method"
+                app:srcCompat="@drawable/baseline_sports_score_24" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>

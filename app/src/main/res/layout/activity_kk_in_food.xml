@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Kk_in_food">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blok_1_in_food"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/base_color_1"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:fontFamily="@font/rubik_mono_one"
+            android:gravity="center"
+
+            android:shadowColor="@color/base_color_2"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="10"
+            android:text="Калории в\nпродуктах"
+            android:textColor="@color/gray"
+            android:textSize="40dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blok_2_in_food"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/xml_for_sloi"
+        app:layout_constraintTop_toBottomOf="@+id/blok_1_in_food"
+        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="-20dp"
+        app:layout_constraintBottom_toTopOf="@+id/blok_3_in_food">
+
+        <LinearLayout
+            android:id="@+id/liner_in_kk_in_food_1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/food_1">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/russo_one"
+                android:gravity="center"
+                android:text="Продукты:"
+                android:textColor="@color/gray"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/russo_one"
+                android:gravity="center"
+                android:text="Граммы:"
+                android:textColor="@color/gray"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            app:layout_constraintTop_toBottomOf="@+id/liner_in_kk_in_food_1"
+            app:layout_constraintBottom_toTopOf="@+id/food_2"
+
+            android:id="@+id/food_1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/kasha"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/russo_one"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:text="Каша\nовсянка"
+                android:paddingStart="30dp"
+                android:layout_marginStart="0dp"
+                android:textColor="@color/gray"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_text_kasha"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/russo_one"
+                android:gravity="center"
+                android:inputType="number"
+                android:hint="Грамм..."
+                android:text="0"
+                android:maxLength="5"
+                android:paddingStart="8dp"
+                android:paddingBottom="0dp"
+                android:textColor="@color/gray"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:textColorHint="@color/light_black_color_btn"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            app:layout_constraintTop_toBottomOf="@+id/food_1"
+            app:layout_constraintBottom_toTopOf="@+id/food_3"
+            android:gravity="center"
+            android:id="@+id/food_2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/russo_one"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:text="Творог"
+                android:paddingStart="30dp"
+                android:layout_marginStart="0dp"
+                android:textColor="@color/gray"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_text_tvorog"
+                android:layout_width="200dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/russo_one"
+                android:hint="Грамм..."
+                android:maxLength="5"
+                android:text="0"
+                android:paddingStart="8dp"
+                android:paddingBottom="0dp"
+                android:textColor="@color/gray"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:textColorHint="@color/light_black_color_btn"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            app:layout_constraintTop_toBottomOf="@+id/food_2"
+            app:layout_constraintBottom_toTopOf="@+id/food_4"
+            android:gravity="center"
+            android:id="@+id/food_3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/russo_one"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:text="Суп"
+                android:paddingStart="30dp"
+                android:layout_marginStart="0dp"
+                android:textColor="@color/gray"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_text_soup"
+                android:layout_width="200dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/russo_one"
+                android:hint="Грамм..."
+                android:text="0"
+                android:maxLength="5"
+                android:paddingStart="8dp"
+                android:paddingBottom="0dp"
+                android:textColor="@color/gray"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:textColorHint="@color/light_black_color_btn"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/food_4"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/food_3"
+            app:layout_constraintBottom_toTopOf="@+id/food_5">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/russo_one"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:text="Рис"
+                android:paddingStart="30dp"
+                android:layout_marginStart="0dp"
+                android:textColor="@color/gray"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="200dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="5"
+                android:id="@+id/edit_text_rise"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/russo_one"
+                android:hint="Грамм..."
+                android:text="0"
+                android:paddingStart="8dp"
+                android:paddingBottom="0dp"
+                android:textColor="@color/gray"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:textColorHint="@color/light_black_color_btn"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/food_5"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/food_4"
+            app:layout_constraintBottom_toTopOf="@+id/food_6">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/russo_one"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:text="Рыба"
+                android:paddingStart="30dp"
+                android:layout_marginStart="0dp"
+                android:textColor="@color/gray"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="200dp"
+                android:gravity="center"
+                android:inputType="number"
+
+                android:id="@+id/edit_text_fish"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/russo_one"
+                android:hint="Грамм..."
+                android:maxLength="5"
+                android:text="0"
+                android:paddingStart="8dp"
+                android:paddingBottom="0dp"
+                android:textColor="@color/gray"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:textColorHint="@color/light_black_color_btn"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/food_6"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/food_5"
+            app:layout_constraintBottom_toTopOf="@+id/food_7">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/russo_one"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:text="Курица\nили мясо"
+                android:paddingStart="30dp"
+                android:layout_marginStart="0dp"
+                android:textColor="@color/gray"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/russo_one"
+                android:layout_width="200dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="0"
+                android:maxLength="5"
+                android:id="@+id/edit_text_chikem_or_meat"
+                android:hint="Грамм..."
+                android:paddingStart="8dp"
+                android:paddingBottom="0dp"
+                android:textColor="@color/gray"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:textColorHint="@color/light_black_color_btn"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/food_7"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/food_6"
+            app:layout_constraintBottom_toTopOf="@+id/food_8">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/russo_one"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:text="Гречка"
+                android:paddingStart="30dp"
+                android:layout_marginStart="0dp"
+                android:textColor="@color/gray"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="200dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="0"
+                android:maxLength="5"
+                android:id="@+id/edit_text_grecha"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/russo_one"
+                android:hint="Грамм..."
+                android:paddingStart="8dp"
+                android:paddingBottom="0dp"
+                android:textColor="@color/gray"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:textColorHint="@color/light_black_color_btn"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/food_8"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/food_7"
+            app:layout_constraintBottom_toBottomOf="@+id/food_9">
+
+            <TextView
+                android:id="@+id/text_food_in_food_8"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/russo_one"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:text="Чай без\nсахара"
+                android:paddingStart="30dp"
+                android:layout_marginStart="0dp"
+                android:textColor="@color/gray"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="200dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="0"
+                android:maxLength="5"
+                android:id="@+id/edit_text_tea"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/russo_one"
+                android:hint="Грамм..."
+                android:paddingStart="8dp"
+                android:paddingBottom="0dp"
+                android:textColor="@color/gray"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:textColorHint="@color/light_black_color_btn"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/food_9"
+            android:onClick="method_check_data_user"
+            android:layout_width="170dp"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/food_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:fontFamily="@font/russo_one"
+            android:textSize="10dp"
+            android:background="@drawable/color_to_btns_gran"
+            android:text="Ввести самостоятельно"
+            app:layout_constraintBottom_toTopOf="@+id/btns_save_see_more"/>
+
+        <LinearLayout
+            android:id="@+id/btns_save_see_more"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/food_9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/btn_see_more_food"
+                android:onClick="btn_see_more_food_method"
+                android:layout_width="170dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/color_to_btns_gran"
+                android:text="Смотреть больше"
+
+                android:textColor="@color/white"
+                android:fontFamily="@font/russo_one"
+                android:textSize="13dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/food_8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:id="@+id/btn_save_food"
+                android:onClick="btn_save_food_method"
+                android:layout_width="170dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/color_to_btns_gran"
+                android:text="Съел"
+                android:textColor="@color/white"
+                android:fontFamily="@font/russo_one"
+                android:textSize="13dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/food_8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="7dp"
+                android:layout_marginBottom="35dp"/>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blok_3_in_food"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/xml_for_sloi_bottom"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/imageButton_go_home_in_food"
+                android:onClick="imageButton_go_home_in_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                app:srcCompat="@drawable/baseline_home_24" />
+
+            <ImageButton
+                android:id="@+id/imageButton_go_trains_in_food"
+                android:onClick="imageButton_go_trains_in_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                app:srcCompat="@drawable/baseline_sports_24" />
+
+            <ImageButton
+                android:id="@+id/btn_settings_in_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                android:onClick="btn_settings_in_food"
+                app:srcCompat="@drawable/baseline_table_rows_24" />
+
+            <ImageButton
+                android:id="@+id/imageButton5_in_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@drawable/light_to_btn_menu"
+                app:srcCompat="@drawable/baseline_fastfood_24" />
+
+            <ImageButton
+                android:id="@+id/btn_itogs_in_food"
+                android:onClick="btn_itogs_in_food_method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_gravity="center"
+                android:background="@color/base_color_2"
+                app:srcCompat="@drawable/baseline_sports_score_24" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
