@@ -53,23 +53,43 @@
 
             <Button
                 android:id="@+id/btn_check_in_user_data"
+                android:onClick="realiz_method_saving_users_data"
                 android:layout_width="150dp"
-                android:layout_height="40dp"
-                android:background="@drawable/color_to_btns_gran"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/color_to_btns"
                 android:text="Запомнить"
                 android:padding="10dp"
                 android:textColor="@color/white"
                 android:textSize="15dp"
                 android:fontFamily="@font/russo_one"
+                android:gravity="center"
+
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="2"
+                android:shadowColor="@color/gray"
 
                 app:layout_constraintTop_toBottomOf="@+id/edit_text_user_check_kk"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="40dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
                 android:layout_gravity="center"
                 />
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/btn_calc"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/btn_check_in_user_data"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/btn_check_in_user_data"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/btn_check_in_user_data"-->
+<!--                android:src="@drawable/baseline_calculate_24"-->
+<!--                android:background="@color/color_to_btns"-->
+<!--                android:onClick="method_calc"-->
+<!--                />-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

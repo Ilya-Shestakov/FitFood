@@ -68,7 +68,7 @@ public class Kilo_k_to_trains extends AppCompatActivity {
 
             int check_hour_in_hour = Integer.parseInt(check_hour_edit_text_str);
             float check_minut_in_minut = Float.parseFloat(check_minut_in_minut_str);
-            float itog_num = (((check_minut_in_minut / 60) + check_hour_in_hour) * 400);;
+            float itog_num = (((check_minut_in_minut / 60) + check_hour_in_hour) * 400);
 
             int itog_min_in_int = Math.round(itog_num);
 
@@ -80,24 +80,26 @@ public class Kilo_k_to_trains extends AppCompatActivity {
             fileOutputStream.close();
 
             u_result_on_u_train_numb.setText(itog_min_in_str);
-        } catch (IOException e) {
+
+            Toast.makeText(this, "Данные сохранены", Toast.LENGTH_SHORT).show();
+
+        } catch (Exception e) {
             FileOutputStream fileOutputStream = null;
             try {
                 fileOutputStream = openFileOutput("user_data_3.txt", MODE_PRIVATE);
             } catch (FileNotFoundException ex) {
-                throw new RuntimeException(ex);
+                Toast.makeText(this, "Error: №213dw09", Toast.LENGTH_SHORT).show();
             }
             try {
                 fileOutputStream.write((String.valueOf(0)).getBytes());
             } catch (IOException ex) {
-                throw new RuntimeException(ex);
+                Toast.makeText(this, "Error: №213dw09", Toast.LENGTH_SHORT).show();
             }
             try {
                 fileOutputStream.close();
             } catch (IOException ex) {
-                throw new RuntimeException(ex);
+                Toast.makeText(this, "Error: №213dw09", Toast.LENGTH_SHORT).show();
             }
-            Toast.makeText(this, "Error: №213dw09", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -126,6 +128,8 @@ public class Kilo_k_to_trains extends AppCompatActivity {
 
             u_result_on_u_train_numb.setText(itog_min_in_str);
 
+            Toast.makeText(this, "Данные сохранены", Toast.LENGTH_SHORT).show();
+
         } catch (Exception e) {
             FileOutputStream fileOutputStream = null;
             try {
@@ -143,7 +147,6 @@ public class Kilo_k_to_trains extends AppCompatActivity {
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
-            Toast.makeText(this, "Error: №213dw09", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -172,6 +175,8 @@ public class Kilo_k_to_trains extends AppCompatActivity {
 
             u_result_on_u_train_numb.setText(itog_min_in_str);
 
+            Toast.makeText(this, "Данные сохранены", Toast.LENGTH_SHORT).show();
+
         } catch (Exception e) {
             FileOutputStream fileOutputStream = null;
             try {
@@ -189,7 +194,6 @@ public class Kilo_k_to_trains extends AppCompatActivity {
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
-            Toast.makeText(this, "Error: №213dw09", Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -217,6 +221,9 @@ public class Kilo_k_to_trains extends AppCompatActivity {
             fileOutputStream.close();
 
             u_result_on_u_train_numb.setText(itog_min_in_str);
+
+            Toast.makeText(this, "Данные сохранены", Toast.LENGTH_SHORT).show();
+
         } catch (Exception e) {
 
             FileOutputStream fileOutputStream = null;
@@ -235,7 +242,6 @@ public class Kilo_k_to_trains extends AppCompatActivity {
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
-            Toast.makeText(this, "Error: №213dw09", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -262,6 +268,9 @@ public class Kilo_k_to_trains extends AppCompatActivity {
             fileOutputStream.close();
 
             u_result_on_u_train_numb.setText(itog_min_in_str);
+
+            Toast.makeText(this, "Данные сохранены", Toast.LENGTH_SHORT).show();
+
         } catch (Exception e) {
 
             FileOutputStream fileOutputStream = null;
@@ -280,7 +289,6 @@ public class Kilo_k_to_trains extends AppCompatActivity {
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
-            Toast.makeText(this, "Error: №213dw09", Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -308,6 +316,9 @@ public class Kilo_k_to_trains extends AppCompatActivity {
             fileOutputStream.close();
 
             u_result_on_u_train_numb.setText(itog_min_in_str);
+
+            Toast.makeText(this, "Данные сохранены", Toast.LENGTH_SHORT).show();
+
         } catch (Exception e) {
             FileOutputStream fileOutputStream = null;
             try {
@@ -325,7 +336,6 @@ public class Kilo_k_to_trains extends AppCompatActivity {
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
-            Toast.makeText(this, "Error: №213dw09", Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -409,15 +419,29 @@ public class Kilo_k_to_trains extends AppCompatActivity {
 
     public void realiz_method_saving_users_data(){
         EditText edit_text_user_check_kk = dialog.findViewById(R.id.edit_text_user_check_kk);
-
-        FileOutputStream fileOutputStream = null;
-        try {
-            fileOutputStream = openFileOutput("user_data_3.txt", MODE_PRIVATE);
-            fileOutputStream.write((String.valueOf(edit_text_user_check_kk.getText())).getBytes());
-            fileOutputStream.close();
-            Toast.makeText(this, "Данные сохранены", Toast.LENGTH_SHORT).show();
-        } catch (IOException e) {
-            Toast.makeText(this, "SISTEM_Error", Toast.LENGTH_SHORT).show();
+        String edit_text_user_check_kk_tr_string = edit_text_user_check_kk.getText().toString();
+        if (edit_text_user_check_kk_tr_string.isEmpty()){
+            FileOutputStream fileOutputStream = null;
+            try {
+                fileOutputStream = openFileOutput("user_data_3.txt", MODE_PRIVATE);
+                fileOutputStream.write((String.valueOf(0)).getBytes());
+                fileOutputStream.close();
+                Toast.makeText(Kilo_k_to_trains.this, "Данные сохранены", Toast.LENGTH_SHORT).show();
+                edit_text_user_check_kk.setText("0");
+            } catch (IOException ew) {
+                Toast.makeText(this, "SISTEM_Error", Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            FileOutputStream fileOutputStream = null;
+            try {
+                fileOutputStream = openFileOutput("user_data_3.txt", MODE_PRIVATE);
+                fileOutputStream.write((String.valueOf(edit_text_user_check_kk.getText())).getBytes());
+                fileOutputStream.close();
+                Toast.makeText(this, "Данные сохранены", Toast.LENGTH_SHORT).show();
+                edit_text_user_check_kk.setText("0");
+            } catch (IOException e) {
+                Toast.makeText(this, "SISTEM_Error", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 }

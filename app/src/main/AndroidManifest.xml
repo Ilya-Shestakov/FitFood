@@ -15,6 +15,12 @@
         android:theme="@style/Theme.Good_Food"
         tools:targetApi="31">
         <activity
+            android:name=".Notes"
+            android:exported="false" />
+        <activity
+            android:name=".Calculator"
+            android:exported="false" />
+        <activity
             android:name=".trains_user_check"
             android:exported="false" />
         <activity

@@ -17,6 +17,7 @@ import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -79,6 +80,8 @@ public class Itogs extends AppCompatActivity {
 
             stringBuffer_str = String.valueOf(stringBuffer);
 
+        } catch (FileNotFoundException fileNotFoundException){
+            Toast.makeText(this, "Data not found", Toast.LENGTH_SHORT).show();
         } catch (IOException e){
             Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
         }
@@ -102,6 +105,8 @@ public class Itogs extends AppCompatActivity {
 
             stringBuffer2_str = String.valueOf(stringBuffer2);
 
+        } catch (FileNotFoundException fileNotFoundException){
+            Toast.makeText(this, "Data not found", Toast.LENGTH_SHORT).show();
         } catch (IOException e){
             Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
         }
@@ -124,6 +129,8 @@ public class Itogs extends AppCompatActivity {
 
             stringBuffer3_str = String.valueOf(stringBuffer3);
 
+        } catch (FileNotFoundException fileNotFoundException){
+            Toast.makeText(this, "Data not found", Toast.LENGTH_SHORT).show();
         } catch (IOException e){
             Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
         }
@@ -145,7 +152,7 @@ public class Itogs extends AppCompatActivity {
         btn_go_schot_in_wind_mon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            prim_data_mon();
+                prim_data_mon();
             }
         });
     }
@@ -231,8 +238,6 @@ public class Itogs extends AppCompatActivity {
         TextView now_itog_in_mon = dialog.findViewById(R.id.now_itog_in_mon);
         TextView now_trains_in_mon = dialog.findViewById(R.id.now_trains_in_thu);
 
-
-        Integer stringBuffer_int = Integer.parseInt(nu_kak_bu_nado_to_chell());
         Integer stringBuffer2_int = Integer.parseInt(nu_kak_bu_nado_to_eat());
         Integer stringBuffer3_int = Integer.parseInt(nu_kak_bu_nado_to_sport());
 
@@ -808,7 +813,7 @@ public class Itogs extends AppCompatActivity {
             TextView itog_for_chell = dialog.findViewById(R.id.itog_for_chell);
 
             if (Integer.parseInt(stringBuffer_str) >= RESULT){
-                itog_for_chell.setText("Цель: " + stringBuffer_str + "\nуспешно");
+                itog_for_chell.setText("Цель: " + stringBuffer_str + "\nВыполнено успешно");
             } else {
                 itog_for_chell.setText("Цель:" + stringBuffer_str + "\n провал!");
             }
@@ -823,9 +828,6 @@ public class Itogs extends AppCompatActivity {
             } else {
                 osn_text.setText("Вес не изменился");
             }
-
-//            Toast.makeText(this, String.valueOf(RESULT), Toast.LENGTH_SHORT).show();
-
 
             TextView monday_res = dialog.findViewById(R.id.monday_result);
             monday_res.setText(String.valueOf(stringBuffer_monay_int));
@@ -847,12 +849,10 @@ public class Itogs extends AppCompatActivity {
 
             TextView sunday_res = dialog.findViewById(R.id.sunday_result);
             sunday_res.setText(String.valueOf(stringBuffer_sun_int));
-
-
-
+        } catch (FileNotFoundException fileNotFoundException){
+            Toast.makeText(this, "SISTEM_Error\nОтсутствуют необходимые данные", Toast.LENGTH_SHORT).show();
         } catch (IOException e){
             Toast.makeText(this, "SISTEM_Error", Toast.LENGTH_SHORT).show();
         }
-    
     }
 }

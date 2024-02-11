@@ -126,13 +126,18 @@
                 <Button
                     android:id="@+id/btn_go_schot_in_wind_thour"
                     android:layout_width="150dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/color_to_btns_gran"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/color_to_btns"
                     android:text="Применить"
                     android:padding="10dp"
                     android:textColor="@color/white"
                     android:textSize="15dp"
                     android:fontFamily="@font/russo_one"
+
+                    android:shadowDx="4"
+                    android:shadowDy="4"
+                    android:shadowRadius="2"
+                    android:shadowColor="@color/gray"
 
                     android:layout_marginTop="50dp"
                     android:layout_gravity="center"

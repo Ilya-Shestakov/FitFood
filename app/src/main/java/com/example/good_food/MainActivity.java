@@ -87,27 +87,52 @@ public class MainActivity extends AppCompatActivity{
 
     public void save_info(){
 
-        editText = dialog.findViewById(R.id.new_challenge_kk_edit_text);
-        editText_2 = editText.getText().toString();
+        try {
+            editText = dialog.findViewById(R.id.new_challenge_kk_edit_text);
+            editText_2 = editText.getText().toString();
 
-        FileOutputStream fileOutputStream = null;
-        try {
-            fileOutputStream = openFileOutput("user_data.txt", MODE_PRIVATE);
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            if (editText_2.isEmpty()) {
+                FileOutputStream fileOutputStream = null;
+                try {
+                    fileOutputStream = openFileOutput("user_data.txt", MODE_PRIVATE);
+                } catch (FileNotFoundException e) {
+                    Toast.makeText(this, "File not found", Toast.LENGTH_SHORT).show();
+                }
+                try {
+                    fileOutputStream.write((String.valueOf(0)).getBytes());
+                } catch (IOException e) {
+                    Toast.makeText(this, "SISTEM_error", Toast.LENGTH_SHORT).show();
+                }
+                try {
+                    fileOutputStream.close();
+                } catch (IOException e) {
+                    Toast.makeText(this, "SISTEM_error", Toast.LENGTH_SHORT).show();
+                }
+                Toast.makeText(MainActivity.this, "Данные сохранены", Toast.LENGTH_SHORT).show();
+            } else {
+
+                FileOutputStream fileOutputStream = null;
+                try {
+                    fileOutputStream = openFileOutput("user_data.txt", MODE_PRIVATE);
+                } catch (FileNotFoundException e) {
+                    throw new RuntimeException(e);
+                }
+                try {
+                    fileOutputStream.write((editText_2).getBytes());
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                try {
+                    fileOutputStream.close();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                Toast.makeText(MainActivity.this, "Данные успешно сохренены в базу данных!", Toast.LENGTH_SHORT).show();
+                dialog.cancel();
+            }
+        } catch (Exception e){
+            finish();
         }
-        try {
-            fileOutputStream.write((editText_2).getBytes());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        try {
-            fileOutputStream.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        Toast.makeText(MainActivity.this, "Данные успешно сохренены в базу данных!", Toast.LENGTH_SHORT).show();
-        dialog.cancel();
     }
 
     public void showWindDialog_p2(View view) {
@@ -147,11 +172,13 @@ public class MainActivity extends AppCompatActivity{
     public void metod_kk_on_train(View view){
         Intent intent = new Intent(this, Kilo_k_to_trains.class);
         startActivity(intent);
+        finish();
     }
 
     public void metod_kk_on_train_in_gl(View view){
         Intent intent = new Intent(this, Kilo_k_to_trains.class);
         startActivity(intent);
+        finish();
     }
 
     public void settings_btn_in_gl(){
@@ -163,127 +190,31 @@ public class MainActivity extends AppCompatActivity{
     public void btn_kk_in_food_goToLay(View view){
         Intent intent = new Intent(this, Kk_in_food.class);
         startActivity(intent);
+        finish();
     }
 
     public void btn_food_in_gl_method(View view){
         Intent intent = new Intent(this, Kk_in_food.class);
         startActivity(intent);
+        finish();
     }
 
     public void method_go_to_rezim_of_food_in_gl(View view){
         Intent intent = new Intent(this, Rezym_pitaniya.class);
         startActivity(intent);
+        finish();
     }
 
     public void btn_itogs_in_gl_method(View view){
         Intent intent = new Intent(this, Itogs.class);
         startActivity(intent);
+        finish();
     }
 
     public void kalendar_btn_method(View view){
         Intent intent = new Intent(this, Itogs.class);
         startActivity(intent);
+        finish();
     }
 
-
-
 }
-
-//
-//
-//    public void new_challenge_kk_metod(View view){
-//        EditText editText = findViewById(R.id.new_challenge_kk_edit_text);
-//
-//        String editText_2 = editText.getText().toString();
-//
-////записаь в файл и создание, начало
-//        FileOutputStream fileOutputStream = null;
-//        try {
-//            fileOutputStream = openFileOutput("user_data.txt", MODE_PRIVATE);
-//            fileOutputStream.write((editText_2).getBytes());
-//            fileOutputStream.close();
-//
-//            Toast.makeText(this, "Данные записаны в системе", Toast.LENGTH_SHORT).show();
-//        } catch (FileNotFoundException e) {
-//            throw new RuntimeException(e);
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-////записаь в файл и создание, конец
-//
-//
-////чтение с файла, начало
-//        TextView kk_number_in_metod = findViewById(R.id.kk_number);
-//
-//        try {
-//            FileInputStream fileInputStream = openFileInput("user_data.txt");
-//
-//
-//            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
-//            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-//
-//            StringBuffer stringBuffer = new StringBuffer();
-//            String lines = "";
-//
-//            while ((lines = bufferedReader.readLine()) != null) {
-//                stringBuffer.append(lines);
-//            }
-//
-//            kk_number_in_metod.setText(stringBuffer);
-//
-//
-//
-//        } catch (FileNotFoundException e) {
-//            throw new RuntimeException(e);
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-////чтение с файла, конец
-//
-//
-//    }
-
-
-//
-//    public void new_challenge_kk_metod_show(View view){
-//
-//        try {
-//            FileInputStream fileInputStream = openFileInput("user_data.txt");
-//            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
-//            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-//
-//            StringBuffer stringBuffer = new StringBuffer();
-//            String lines = "";
-//
-//            while ((lines = bufferedReader.readLine()) != null) {
-//                stringBuffer.append(lines);
-//            }
-//
-//            Toast.makeText(this, stringBuffer, Toast.LENGTH_LONG).show();
-//
-//
-//
-//
-//        } catch (IOException e) {
-//            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
-//        }
-//    }
-//
-//    public void ShowInfoAlert(String text){
-//        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-//        builder.setTitle("Ваша последняя цель:");
-//        builder.setIcon(getDrawable(R.drawable.gym_power_icone));
-//
-//        builder.setMessage(text);
-//        builder.setCancelable(false);
-//
-//        builder.setNegativeButton("Закрыть", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialogInterface, int which) {
-//                dialogInterface.cancel();
-//            }
-//        });
-//
-//        AlertDialog dialog = builder.create();
-//        dialog.show();
-//    }

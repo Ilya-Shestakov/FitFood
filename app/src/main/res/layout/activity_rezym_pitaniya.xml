@@ -27,9 +27,9 @@
             android:shadowDy="10"
             android:shadowRadius="10"
 
-            android:text="Режим питания"
+            android:text="Варианты правильного питания"
             android:textColor="@color/gray"
-            android:textSize="40dp"
+            android:textSize="35dp"
             android:textStyle="bold"
             tools:ignore="MissingConstraints" />
 
@@ -64,14 +64,18 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/color_to_btns_gran"
+                android:backgroundTint="@color/color_to_btns"
                 android:fontFamily="@font/russo_one"
                 android:onClick="go_to_wind_zavtrak_method"
                 android:text="Завтрак"
-
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="2"
+                android:shadowColor="@color/gray"
                 android:textColor="@color/white"
-                android:textSize="15dp"
+                android:textSize="13dp"
                 android:textStyle="bold"
+                style="@style/Radius_20dp_num_1"
                 />
 
 
@@ -81,14 +85,18 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/color_to_btns_gran"
+                android:backgroundTint="@color/color_to_btns"
                 android:fontFamily="@font/russo_one"
                 android:text="Обед"
                 android:textColor="@color/white"
                 android:onClick="go_to_wind_launch_method"
-
-                android:textSize="15dp"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="2"
+                android:shadowColor="@color/gray"
+                android:textSize="13dp"
                 android:textStyle="bold"
+                style="@style/Radius_20dp_num_1"
                 />
 
 
@@ -98,14 +106,18 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/color_to_btns_gran"
+                android:backgroundTint="@color/color_to_btns"
                 android:fontFamily="@font/russo_one"
                 android:onClick="go_to_wind_dinner_method"
                 android:text="Ужин"
                 android:textColor="@color/white"
-
-                android:textSize="15dp"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="2"
+                android:shadowColor="@color/gray"
+                android:textSize="13dp"
                 android:textStyle="bold"
+                style="@style/Radius_20dp_num_1"
                 />
 
             <Button
@@ -114,14 +126,18 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/color_to_btns_gran"
+                android:backgroundTint="@color/color_to_btns"
                 android:fontFamily="@font/russo_one"
                 android:text="Перекусы"
                 android:textColor="@color/white"
                 android:onClick="go_to_wind_fast_food_method"
-
-                android:textSize="15dp"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="2"
+                android:shadowColor="@color/gray"
+                android:textSize="13dp"
                 android:textStyle="bold"
+                style="@style/Radius_20dp_num_1"
                 />
 
         </LinearLayout>

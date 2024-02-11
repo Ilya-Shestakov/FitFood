@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Kk_in_food">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -45,7 +46,7 @@
             android:id="@+id/liner_in_kk_in_food_1"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/food_1">
@@ -406,7 +407,7 @@
             android:orientation="horizontal"
             android:gravity="center"
             app:layout_constraintTop_toBottomOf="@+id/food_7"
-            app:layout_constraintBottom_toBottomOf="@+id/food_9">
+            app:layout_constraintBottom_toBottomOf="@+id/user_notes_food">
 
             <TextView
                 android:id="@+id/text_food_in_food_8"
@@ -444,70 +445,77 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/food_9"
-            android:onClick="method_check_data_user"
-            android:layout_width="170dp"
-            android:layout_height="30dp"
-            app:layout_constraintTop_toBottomOf="@+id/food_8"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:textColor="@color/white"
-            android:fontFamily="@font/russo_one"
-            android:textSize="10dp"
-            android:background="@drawable/color_to_btns_gran"
-            android:text="Ввести самостоятельно"
-            app:layout_constraintBottom_toTopOf="@+id/btns_save_see_more"/>
+            <Button
+                android:id="@+id/user_notes_food"
+                android:onClick="method_check_data_user"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:shadowDx="4"
+                style="@style/Radius_20dp_num_1"
+                android:shadowDy="4"
+                android:shadowRadius="2"
+                android:shadowColor="@color/gray"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:fontFamily="@font/russo_one"
+                android:textSize="13dp"
+                android:backgroundTint="@color/color_to_btns"
+                android:text="Своё..."
+                android:layout_marginBottom="20dp"
 
-        <LinearLayout
-            android:id="@+id/btns_save_see_more"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="0dp"
-            android:orientation="horizontal"
-            android:gravity="center_horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/food_9"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="20dp">
+                app:layout_constraintTop_toBottomOf="@+id/food_8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_see_more_food"
+                app:layout_constraintEnd_toStartOf="@+id/btn_save_food"
+                />
 
             <Button
                 android:id="@+id/btn_see_more_food"
                 android:onClick="btn_see_more_food_method"
-                android:layout_width="170dp"
-                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:shadowDx="4"
+                style="@style/Radius_20dp_num_1"
+                android:shadowDy="4"
+                android:shadowRadius="2"
+                android:shadowColor="@color/gray"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/color_to_btns_gran"
-                android:text="Смотреть больше"
-
+                android:backgroundTint="@color/color_to_btns"
+                android:text="Больше..."
+                android:gravity="center"
                 android:textColor="@color/white"
                 android:fontFamily="@font/russo_one"
                 android:textSize="13dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="20dp"
+
                 app:layout_constraintTop_toBottomOf="@+id/food_8"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginEnd="7dp"
-                android:layout_marginBottom="20dp"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/user_notes_food"/>
 
             <Button
                 android:id="@+id/btn_save_food"
                 android:onClick="btn_save_food_method"
-                android:layout_width="170dp"
-                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/color_to_btns_gran"
+                android:backgroundTint="@color/color_to_btns"
                 android:text="Съел"
+                style="@style/Radius_20dp_num_1"
+                android:gravity="center"
                 android:textColor="@color/white"
                 android:fontFamily="@font/russo_one"
                 android:textSize="13dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="2"
+                android:shadowColor="@color/gray"
+
+                android:layout_marginBottom="20dp"
                 app:layout_constraintTop_toBottomOf="@+id/food_8"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginStart="7dp"
-                android:layout_marginBottom="35dp"/>
-
-        </LinearLayout>
+                app:layout_constraintStart_toEndOf="@+id/user_notes_food"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

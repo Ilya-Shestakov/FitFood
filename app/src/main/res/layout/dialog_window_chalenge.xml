@@ -18,23 +18,24 @@
             android:layout_height="match_parent"
             android:background="@drawable/color_to_btns_gran">
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                />-->
-
             <Button
                 android:id="@+id/btn_save_new_challenge"
-                style="@style/Radius_20dp_num_1"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/color_to_btns_gran"
+                android:backgroundTint="@color/color_to_btns"
+
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="2"
+                android:shadowColor="@color/gray"
 
                 android:text="Сохранить"
-                android:textColor="@color/black"
-                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -45,11 +46,12 @@
                 android:layout_width="180dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:paddingTop="5dp"
                 android:hint="Цель на неделю"
                 android:maxLength="5"
                 android:inputType="number"
                 android:textColorHint="@color/white"
-                android:onClick="new_challenge_kk_netod_save"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

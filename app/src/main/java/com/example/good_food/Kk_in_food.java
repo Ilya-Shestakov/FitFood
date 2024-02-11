@@ -19,7 +19,7 @@ import java.io.IOException;
 
 public class  Kk_in_food extends AppCompatActivity{
 
-    Dialog dialog;
+    Dialog dialog, dialog_2;
     EditText edit_text_kasha;
     EditText edit_text_tvorog;
     EditText edit_text_soup;
@@ -98,12 +98,24 @@ public class  Kk_in_food extends AppCompatActivity{
             edit_text_grecha.setText("0");
             edit_text_tea.setText("0");
 
-        } catch (NumberFormatException e) {
-            Toast.makeText(this, "Error: №213dw09", Toast.LENGTH_SHORT).show();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        } catch (Exception e) {
+            FileOutputStream fileOutputStream12 = null;
+            try {
+                fileOutputStream12 = openFileOutput("user_data_2.txt", MODE_PRIVATE);
+            } catch (FileNotFoundException ex) {
+                Toast.makeText(this, "File not founded", Toast.LENGTH_SHORT).show();
+            }
+            try {
+                fileOutputStream12.write((String.valueOf(0)).getBytes());
+            } catch (IOException ex) {
+                Toast.makeText(this, "Error: №213dw09", Toast.LENGTH_SHORT).show();
+            }
+            try {
+                fileOutputStream12.close();
+            } catch (IOException ex) {
+                Toast.makeText(this, "Error: №213dw09", Toast.LENGTH_SHORT).show();
+            }
+            Toast.makeText(this, "Данные сохранены", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -114,7 +126,7 @@ public class  Kk_in_food extends AppCompatActivity{
     }
 
     public void btn_see_more_food_method(View view){
-//        Toast.makeText(this, "Error: №213dw09", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Error: №213dw09", Toast.LENGTH_SHORT).show();
 
         dialog.setContentView(R.layout.activity_wind_to_web_food);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable((Color.TRANSPARENT)));
@@ -146,20 +158,41 @@ public class  Kk_in_food extends AppCompatActivity{
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
 
-        Button btn_check_in_user_data;
-        btn_check_in_user_data = dialog.findViewById(R.id.btn_check_in_user_data);
-        btn_check_in_user_data.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                realiz_method_saving_users_data();
-            }
-        });
+//        Button go_to_calc;
+//        go_to_calc = dialog.findViewById(R.id.btn_calc);
+//        go_to_calc.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                method_calc_in_Id();
+//            }
+//        });
+
+//        Button btn_check_in_user_data;
+//        btn_check_in_user_data = dialog.findViewById(R.id.btn_check_in_user_data);
+//        btn_check_in_user_data.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                realiz_method_saving_users_data();
+//            }
+//        });
     }
 
-    public void realiz_method_saving_users_data(){
+    public void realiz_method_saving_users_data(View view){
         EditText edit_text_user_check_kk = dialog.findViewById(R.id.edit_text_user_check_kk);
+        String edit_text_user_check_kk_string = edit_text_user_check_kk.getText().toString();
 
-        FileOutputStream fileOutputStream = null;
+        if (edit_text_user_check_kk_string.isEmpty()){
+            FileOutputStream fileOutputStream = null;
+            try {
+                    fileOutputStream = openFileOutput("user_data_2.txt", MODE_PRIVATE);
+                    fileOutputStream.write((String.valueOf(0)).getBytes());
+                    fileOutputStream.close();
+                    Toast.makeText(Kk_in_food.this, "Данные сохранены", Toast.LENGTH_SHORT).show();
+                } catch (IOException ew) {
+                    Toast.makeText(this, "SISTEM_Error", Toast.LENGTH_SHORT).show();
+                }
+        } else {
+            FileOutputStream fileOutputStream = null;
             try {
                 fileOutputStream = openFileOutput("user_data_2.txt", MODE_PRIVATE);
                 fileOutputStream.write((String.valueOf(edit_text_user_check_kk.getText())).getBytes());
@@ -169,7 +202,7 @@ public class  Kk_in_food extends AppCompatActivity{
             } catch (IOException e) {
                 Toast.makeText(this, "SISTEM_Error", Toast.LENGTH_SHORT).show();
             }
-
+        }
     }
 
     public void start_go_to_web_food(){
@@ -177,23 +210,19 @@ public class  Kk_in_food extends AppCompatActivity{
         startActivity(intent);
         finish();
     }
-
     public void imageButton_go_trains_in_food(View view){
         Intent intent = new Intent(this, Kilo_k_to_trains.class);
         startActivity(intent);
         finish();
     }
-
     public void btn_settings_in_food(View view){
         dialog.setContentView(R.layout.activity_settings);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
     }
-
     public void btn_itogs_in_food_method(View view){
         Intent intent = new Intent(this, Itogs.class);
         startActivity(intent);
         finish();
     }
-
 }

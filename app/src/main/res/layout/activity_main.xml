@@ -10,7 +10,7 @@
 
     <TextView
         android:id="@+id/title_view_kalkul_kal"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="140dp"
         android:fontFamily="@font/rubik_mono_one"
         android:gravity="center"
@@ -49,22 +49,27 @@
             app:layout_constraintTop_toTopOf="parent">
 
 
+
             <Button
                 android:id="@+id/btn_kk_on_trains"
+                style="@style/Radius_20dp_num_1"
                 android:layout_width="300dp"
-                android:layout_height="60dp"
+                android:layout_height="63dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/color_to_btns_gran"
+                android:backgroundTint="@color/color_to_btns"
                 android:fontFamily="@font/russo_one"
+                android:gravity="center"
                 android:onClick="metod_kk_on_train"
                 android:text="Тренировки"
-
                 android:textColor="@color/white"
-                android:textSize="15dp"
+                android:textSize="13dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/btn_good_food"
-
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="2"
+                android:shadowColor="@color/gray"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
 
@@ -72,24 +77,27 @@
 
                 />
 
-
             <Button
                 android:id="@+id/btn_go_to_rezim_of_food_in_gl"
                 android:onClick="method_go_to_rezim_of_food_in_gl"
                 android:layout_width="300dp"
-                android:layout_height="60dp"
+                android:layout_height="63dp"
+                style="@style/Radius_20dp_num_1"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/color_to_btns_gran"
+                android:backgroundTint="@color/color_to_btns"
                 android:fontFamily="@font/russo_one"
                 android:text="Режим питания"
                 android:textColor="@color/white"
-
-                android:textSize="15dp"
+                android:gravity="center"
+                android:textSize="13dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/btn_kk_in_food"
                 app:layout_constraintEnd_toEndOf="parent"
-
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="2"
+                android:shadowColor="@color/gray"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_kk_on_trains"
 
@@ -100,19 +108,22 @@
             <Button
                 android:id="@+id/btn_kk_in_food"
                 android:layout_width="300dp"
-                android:layout_height="60dp"
+                android:layout_height="63dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/color_to_btns_gran"
+                android:backgroundTint="@color/color_to_btns"
                 android:fontFamily="@font/russo_one"
                 android:onClick="btn_kk_in_food_goToLay"
                 android:text="Продукты"
                 android:textColor="@color/white"
-
-                android:textSize="15dp"
+                android:gravity="center"
+                android:textSize="13dp"
                 android:textStyle="bold"
-
-
+                style="@style/Radius_20dp_num_1"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="2"
+                android:shadowColor="@color/gray"
                 app:layout_constraintBottom_toTopOf="@+id/btn_kalendar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -121,19 +132,22 @@
             <Button
                 android:id="@+id/btn_kalendar"
                 android:layout_width="300dp"
-                android:layout_height="60dp"
+                android:layout_height="63dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/color_to_btns_gran"
+                android:backgroundTint="@color/color_to_btns"
                 android:fontFamily="@font/russo_one"
                 android:onClick="kalendar_btn_method"
                 android:text="Календарь"
                 android:textColor="@color/white"
-
-                android:textSize="15dp"
+                style="@style/Radius_20dp_num_1"
+                android:textSize="13dp"
                 android:textStyle="bold"
-
-
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="2"
+                android:shadowColor="@color/gray"
+                android:gravity="center"
                 app:layout_constraintBottom_toTopOf="@+id/liner_layout_challenge"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -142,7 +156,7 @@
             <LinearLayout
                 android:id="@+id/liner_layout_challenge"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:orientation="horizontal"
@@ -154,29 +168,41 @@
 
                 <Button
                     android:id="@+id/btn_challenge_show"
-                    style="@style/Radius_20dp_num_1"
-                    android:layout_width="140dp"
-                    android:layout_height="60dp"
+                    android:layout_width="145dp"
+                    android:layout_height="63dp"
                     android:layout_marginEnd="5dp"
-                    android:background="@drawable/color_to_btns_gran"
+                    android:backgroundTint="@color/color_to_btns"
                     android:fontFamily="@font/russo_one"
                     android:onClick="showWindDialog_p2"
+                    android:layout_gravity="center_vertical"
                     android:text="Посмотреть цель"
                     android:textColor="@color/white"
-                    android:textSize="12dp"
+                    android:textSize="13dp"
+                    android:gravity="center"
+                    android:shadowDx="4"
+                    android:shadowDy="4"
+                    style="@style/Radius_20dp_num_1"
+                    android:shadowRadius="2"
+                    android:shadowColor="@color/gray"
                     android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btn_challenge_save"
-                    style="@style/Radius_20dp_num_1"
-                    android:layout_width="140dp"
-                    android:layout_height="60dp"
+                    android:layout_width="145dp"
+                    android:layout_height="63dp"
+                    android:gravity="center"
                     android:layout_marginStart="5dp"
-                    android:background="@drawable/color_to_btns_gran"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/color_to_btns"
                     android:fontFamily="@font/russo_one"
                     android:text="Установить цель"
                     android:textColor="@color/white"
-                    android:textSize="12dp"
+                    android:shadowDx="4"
+                    android:shadowDy="4"
+                    android:shadowRadius="2"
+                    android:shadowColor="@color/gray"
+                    android:textSize="13dp"
+                    style="@style/Radius_20dp_num_1"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -259,4 +285,4 @@
 
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

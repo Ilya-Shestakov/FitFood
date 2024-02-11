@@ -27,7 +27,7 @@
             android:shadowDy="10"
             android:shadowRadius="10"
 
-            android:text="Web страница\nтренировки"
+            android:text="Web страница\nпитание"
             android:textColor="@color/gray"
             android:textSize="40dp"
             android:textStyle="bold"

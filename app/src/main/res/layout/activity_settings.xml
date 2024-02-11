@@ -17,98 +17,116 @@
             android:layout_height="match_parent"
             android:background="@drawable/color_to_btns_gran">
 
-            <LinearLayout
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center_horizontal">
+                android:layout_height="match_parent">
 
                 <LinearLayout
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_marginTop="10dp"
                     android:gravity="center_horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:text="Информация о разработчике:"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Информация о разработчике:"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/russo_one"/>
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:text="Имя: Илья"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/russo_one"
+                            />
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:text="GitHub: ilyaShestakov565"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/russo_one"
+                            />
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:text="E-mail: ilya.shestakov08@gmail.com"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/russo_one"
+                            />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="200dp"
+                        android:textColor="@color/black"
+                        android:layout_height="50dp"
+                        android:fontFamily="@font/russo_one"
                         android:gravity="center"
-                        android:textColor="@color/black"
-                        android:textSize="14dp"
-                        android:fontFamily="@font/russo_one"/>
+                        android:text="Все данные приближены к реальным, но не точны"
+                        android:textSize="14dp"/>
 
                     <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="200dp"
                         android:textColor="@color/black"
-                        android:layout_width="match_parent"
-                        android:layout_height="15dp"
-                        android:text="Имя: Илья"
-                        android:textSize="13dp"
+                        android:layout_height="70dp"
                         android:fontFamily="@font/russo_one"
-                        />
+                        android:gravity="center"
+                        android:text="Error: №213dw09\nДанные не введены или введены не польностью"
+                        android:textSize="14dp"/>
 
                     <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="200dp"
                         android:textColor="@color/black"
-                        android:layout_width="match_parent"
-                        android:layout_height="15dp"
-                        android:text="Ник: Hisen"
-                        android:textSize="13dp"
+                        android:layout_height="70dp"
                         android:fontFamily="@font/russo_one"
-                        />
+                        android:gravity="center"
+                        android:text="Если число колорий со знаком: - , значит вы потратили столько колорий"
+                        android:textSize="14dp"/>
 
                     <TextView
-                        android:textColor="@color/black"
-                        android:layout_width="match_parent"
-                        android:layout_height="15dp"
-                        android:text="Email: ilya.shestakov08@gmail.com"
-                        android:textSize="13dp"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:fontFamily="@font/russo_one"
-                        />
+                        android:gravity="center"
+                        android:text="Порядок использования:\n*Введите результаты тренировки\n*Введите результат еды\n*Выберите день\n*Посмотрите результаты!"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/russo_one"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
 
                 </LinearLayout>
 
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:layout_width="200dp"
-                    android:textColor="@color/black"
-                    android:layout_height="50dp"
-                    android:fontFamily="@font/russo_one"
-                    android:gravity="center"
-                    android:text="Все данные приближены к реальным, но не точны"
-                    android:textSize="14dp"/>
-
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:layout_width="200dp"
-                    android:textColor="@color/black"
-                    android:layout_height="70dp"
-                    android:fontFamily="@font/russo_one"
-                    android:gravity="center"
-                    android:text="Error: №213dw09\nДанные не введены или введены не польностью"
-                    android:textSize="14dp"/>
-
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:layout_width="200dp"
-                    android:textColor="@color/black"
-                    android:layout_height="70dp"
-                    android:fontFamily="@font/russo_one"
-                    android:gravity="center"
-                    android:text="Если число колорий со знаком: - , значит вы потратили столько колорий"
-                    android:textSize="14dp"/>
-
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:layout_width="200dp"
-                    android:textColor="@color/black"
-                    android:layout_height="70dp"
-                    android:fontFamily="@font/russo_one"
-                    android:gravity="center"
-                    android:text="Порядок использования:\n*Введите результаты тренировкиn\n*Введите результат еды\n*Выберите день\n*Посмотрите результаты!"
-                    android:textSize="14dp"/>
-
-            </LinearLayout>
+            </ScrollView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
